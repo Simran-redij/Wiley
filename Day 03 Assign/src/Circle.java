@@ -2,10 +2,10 @@
 public class Circle {
 	
 	final double pi = 3.142;
-	float radius;
-	float area;
+	double radius;
+	double area;
 	
-	Circle(float radius){
+	Circle(double radius){
 		this.radius = radius;
 	}
 	
