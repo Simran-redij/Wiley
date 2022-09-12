@@ -4,6 +4,11 @@ public class Employee implements Cloneable{
 	int empId;
 	String empName;
 	
+	
+	public Employee() {
+		super();
+	}
+
 	public Employee(int empId, String empName) {
 		super();
 		this.empId = empId;
@@ -33,13 +38,24 @@ public class Employee implements Cloneable{
 		return false;
 	}
 
-	@Override
+	//Copy constructor 
+//	public Employee(Employee e) {
+//		
+//	}
+//	
+//	public static Employee create() {
+//		
+//	}
+	
+//  @Override
 //	protected Object clone() throws CloneNotSupportedException {
 //		// TODO Auto-generated method stub
-//		Employee e = null;
+//		Employee e = new Employee();
 //		e.empId = this.empId;
 //		e.empName = this.empName;
-//		return e;
+//		System.out.println(e);
+//		//return e;
+//		return super.clone();
 //	}
 
 	@Override
@@ -49,26 +65,8 @@ public class Employee implements Cloneable{
 		super.finalize();
 	}
 	
-	public static void main(String[] args) throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
+	
 
-		Employee e1 = new Employee(101, "John Doe");
-		Employee e2 = new Employee(102, "John Doe");
-		
-		if(e1.equals(e2)) {
-			System.out.println("Objects are equal");
-		}
-		else {
-			System.out.println("Objects are not equal");
-		}
-		
-		System.out.println(e1+" "+e1.hashCode());
-		System.out.println(e2+" "+e2.hashCode());
-		
-		Employee e3 = (Employee) e2.clone();
-		e2.empName = "William";
-		System.out.println(e2);
-		System.out.println(e3);
-	}
+	
 	
 }
