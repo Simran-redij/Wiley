@@ -29,11 +29,6 @@ public class Employee {
 		return this.empGrossSalary;
 	}
 
-//	@Override
-//	public int hashCode() {
-//		// TODO Auto-generated method stub
-//		return super.hashCode();
-//	}
 
 	@Override
 	public boolean equals(Object obj) {

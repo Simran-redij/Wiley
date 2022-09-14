@@ -21,7 +21,7 @@ public class EmployeeApp {
 		// TODO Auto-generated method stub
 		for(int i=0; i<5; i++) {
 			for(int j=i+1; j<5; j++) {
-				if(empArray[i].empBasicSalary < empArray[j].empBasicSalary) {
+				if(empArray[i].calculateGrossSalary() > empArray[j].calculateGrossSalary()) {
 					temp = empArray[i];
 					empArray[i] = empArray[j];
 					empArray[j] = temp;
@@ -30,7 +30,7 @@ public class EmployeeApp {
 		}
 		System.out.println("Employees in ascending order of their salary are : ");
 		for(Employee e : empArray) {
-			System.out.println(e.empId+" "+e.empBasicSalary);
+			System.out.println(e.empId+" "+e.empGrossSalary);
 		}
 		System.out.println("-----------------------------");
 	}
