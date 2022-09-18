@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class EmailValidate extends Throwable{
 
 	public static void checkMail(String str) throws EmailException {
-		if(str.endsWith("@gmail.com") == true) {
+		if(str.endsWith("@gmail.com") == true && str.charAt(str.length()-11) != '@') {
 			System.out.println("Valid email :)");
 		}
 		else {
